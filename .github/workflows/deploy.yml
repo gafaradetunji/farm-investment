@@ -1,4 +1,4 @@
-name: Farm investment
+name: Farm Investment
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - '**'
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,30 +23,21 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
 
       # Install dependencies
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
         working-directory: ./frontend
-
-      # Check TypeScript types
-      # - name: TypeScript Type Check
-      #   run: npm run type-check # Ensure this script is in your package.json
-      #   working-directory: ./frontend
 
       # Run ESLint for linting
       - name: Lint Code
-        run: npm run lint # Ensure this script is in your package.json
+        run: npm run lint
         working-directory: ./frontend
-
-      # Run tests
-      # - name: Run Tests
-      #   run: npm test # Ensure this script is in your package.json
-      #   working-directory: ./frontend
 
       # Build the project
       - name: Build Project
-        run: npm run build # Ensure this script is in your package.json
+        run: npm run build
         working-directory: ./frontend
         env:
           NODE_ENV: production
