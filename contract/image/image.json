@@ -1,0 +1,9 @@
+{
+    "name": "Green Farm Shares",
+    "description": "A tokenized farm where investors can invests in a farm and get returns after harvest .",
+    "image": "ipfs:bafybeihauxi5zs2e6jp7o2uzrtepvdedror75sbqqiaxhpq7nzrxtke524",
+    "attributes": {
+        "trait_type": "Farm Name",
+        "value": "Green Farm"
+    }
+}
