@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { AccountBalanceWallet, Agriculture, Dashboard, ExitToApp, Menu, TrendingUp } from '@mui/icons-material';
+import { AccountBalanceWallet, Agriculture, BarChart, Dashboard, ExitToApp, Menu, TrendingUp } from '@mui/icons-material';
 import {
   Box, Typography, Button, AppBar, Toolbar, IconButton, Chip, Avatar, List, ListItem, ListItemText, ListItemAvatar, Drawer
 } from '@mui/material';
@@ -60,7 +60,7 @@ export const Header = () => {
                 md: 'block'
               } 
              }}>
-              AgriConnect
+              AgriYieldX
             </Typography>
           </Link>
 
@@ -69,7 +69,7 @@ export const Header = () => {
               <Button
                 key={index}
                 color="inherit"
-                startIcon={index === 0 ? "" : item.icon}
+                startIcon={ item.icon}
                 sx={{
                   borderRadius: 2,
                   display: {
