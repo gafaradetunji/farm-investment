@@ -27,22 +27,26 @@ jobs:
       # Install dependencies
       - name: Install Dependencies
         run: npm install
+        working-directory: ./frontend
 
       # Check TypeScript types
       # - name: TypeScript Type Check
       #   run: npm run type-check # Ensure this script is in your package.json
+      #   working-directory: ./frontend
 
       # Run ESLint for linting
       - name: Lint Code
         run: npm run lint # Ensure this script is in your package.json
+        working-directory: ./frontend
 
       # Run tests
       # - name: Run Tests
       #   run: npm test # Ensure this script is in your package.json
+      #   working-directory: ./frontend
 
       # Build the project
       - name: Build Project
         run: npm run build # Ensure this script is in your package.json
-
+        working-directory: ./frontend
         env:
           NODE_ENV: production
